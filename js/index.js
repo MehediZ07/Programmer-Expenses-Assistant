@@ -111,6 +111,7 @@ document.getElementById("assistant-tab").addEventListener("click", function () {
   );
   getElementsById("expense-form").classList.remove("hidden");
   getElementsById("history-section").classList.add("hidden");
+  getElementsById("results").classList.remove("hidden");
 });
 
 // History button click function
@@ -129,4 +130,5 @@ document.getElementById("history-tab").addEventListener("click", function () {
   );
   getElementsById("expense-form").classList.add("hidden");
   getElementsById("history-section").classList.remove("hidden");
+  getElementsById("results").classList.add("hidden");
 });
