@@ -85,10 +85,8 @@ document
       savings,
       remainingBalance,
     } = allInputField();
-    console.log(getElementInnerTextById("balance"));
     const currentBalance = getElementInnerTextById("balance");
     const savingField = getElementValueById("savings");
-    console.log(getElementValueById("savings"));
     const totalSavings = (currentBalance * savingField) / 100;
     const remainBalance = currentBalance - totalSavings;
     savings.innerText = totalSavings;
@@ -111,7 +109,16 @@ document.getElementById("assistant-tab").addEventListener("click", function () {
   );
   getElementsById("expense-form").classList.remove("hidden");
   getElementsById("history-section").classList.add("hidden");
-  getElementsById("results").classList.remove("hidden");
+  getElementsById("results").classList.add("hidden");
+  document.getElementById("savings").value = "";
+  document.getElementById("internet").value = "";
+  document.getElementById("courses").value = "";
+  document.getElementById("software").value = "";
+  document.getElementById("income").value = "";
+  document.getElementById("total-expenses").innerText = "00";
+  document.getElementById("balance").innerText = "00";
+  document.getElementById("savings-amount").innerText = "00";
+  document.getElementById("remaining-balance").innerText = "00";
 });
 
 // History button click function
